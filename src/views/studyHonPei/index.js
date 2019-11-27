@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
-
+import "./styled.css"
 // import { thisTypeAnnotation } from '@babel/types'
 export default class TabBar extends Component {
     render() {

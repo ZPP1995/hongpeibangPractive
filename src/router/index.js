@@ -4,6 +4,7 @@ import QuestionAndAnswer from "../views/questionAndAnswer"
 import Client from "../views/client"
 import Login from "../views/login"
 import Search from "../views/search"
+
 export const tabBarRoute = [
     {
         path: "/",
