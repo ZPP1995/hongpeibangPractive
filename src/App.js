@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Route,
-  Switch
+  Switch,
+  BrowserRouter as Router
 } from "react-router-dom"
 import Home from "./views/home"
 import { noTabBarRoute } from "./router"
@@ -13,6 +14,7 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
+      <Router>
       <div className="App">
         <Switch>
          
@@ -24,8 +26,12 @@ class App extends React.Component {
         <Route path={"/"}  component={Home}></Route>
         </Switch>
       </div>
+      </Router>
     );
 
+  }
+  componentDidMount(){
+    
   }
 }
 
