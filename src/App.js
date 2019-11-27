@@ -6,8 +6,7 @@ import {
 import Home from "./views/home"
 import { noTabBarRoute } from "./router"
 import './App.css';
-/*
-* Home组件，包含导航
+/* Home组件，包含导航
 * 其它组件不包含，比如Login*/
 
 class App extends React.Component {
@@ -20,8 +19,10 @@ class App extends React.Component {
           noTabBarRoute.map((v,i)=>(
             <Route key={i} path={v.path} exact component={v.component}></Route>
           ))
+          
         }
-        <Route path={"/"}  component={Home}></Route>
+          
+          <Route path={"/"}  component={Home}></Route>
         </Switch>
       </div>
     );

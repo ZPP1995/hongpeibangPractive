@@ -4,6 +4,9 @@ import QuestionAndAnswer from "../views/questionAndAnswer"
 import Client from "../views/client"
 import Login from "../views/login"
 import Search from "../views/search"
+import LoginPhone from "../views/loginPhone"
+import Register from "../views/register"
+import Notice from "../views/notice"
 
 export const tabBarRoute = [
     {
@@ -48,6 +51,22 @@ export const noTabBarRoute = [
         component: Login,
         name: "登陆",
     },
+    {
+        path: "/loginPhone",
+        component: LoginPhone,
+        name: "其他登陆",
+    },
+    {
+        path: "/register",
+        component: Register,
+        name: "快速注册",
+    },
+    {
+        path: "/notice",
+        component: Notice,
+        name: "服务条款",
+    },
+
 ]
 
 // concat 连接两个数组返回一个新数组 routeConfig
