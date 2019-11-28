@@ -8,7 +8,7 @@ export default class QuestionAndAnswer extends Component {
         return (
             <div>
                 <Header></Header>
-                {/*<Content></Content>*/}
+                <Content></Content>
             </div>
         )
     }
