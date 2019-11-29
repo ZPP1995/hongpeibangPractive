@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+}
+
+.tiaokuan{
+    background: white;
+    height: 44px;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.jiantou{
+    float: left;
+    font-size: 0;
+    height: 44px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.imgt1{
+    width: 27px;
+    height: 27px;
+    margin: 9.5px 0;
+}
+.tiaokuan1{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 90px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -otext-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tiaokuan2{
+    width:375px;
+    height: 44px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+.neirong{
+    padding: 0;
+    margin: 16px 10px;
+    width:355px;
+    height:2412px;
+    position: fixed;
+    background: red;
+}
+.neirong1{
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.p1{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+.p2{
+    font-size: 20px;
+    line-height: 22px;
+}
+.acticle{
+    font-size: 14px;
+    border: 0px;
+    padding: 0px;
+    margin: 5px auto;
+    white-space: normal;
+}
+.section1{
+    border: 0 none;
+    padding: 0;
+}
+.section2{
+    text-align: center;
+}
+.section3{
+    display: inline-block;
+    width: 20%;
+    margin-right: -16px;
+}
+.span{
+    display: inline-block;
+    width: 80%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 105, 31);
+    vertical-align: middle;
+}
+.span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    border: 1px solid rgb(255, 105, 31);
+    vertical-align: middle;
+}

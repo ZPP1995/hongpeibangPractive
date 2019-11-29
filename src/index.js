@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 import 'lib-flexible'
 import * as serviceWorker from './serviceWorker';
-import {
-    Provider,
-} from "react-redux";
-import store from "../src/store"
+import { Provider } from "react-redux";
+import store from "./store"
 import axios from "axios";
 React.Component.prototype.$axios =axios;
 // 请求拦截
