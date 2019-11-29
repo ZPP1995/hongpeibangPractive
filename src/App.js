@@ -15,22 +15,20 @@ import './App.css';
 
 
 class App extends React.Component {
-
-
   render() {
     return (
       <Router>
-      <div className="App">
-        <Switch>
-         
-        {
-          noTabBarRoute.map((v,i)=>(
-            <Route key={i} path={v.path} exact component={v.component}></Route>
-          ))
-        }
-        <Route path={"/"}  component={Home}></Route>
-        </Switch>
-      </div>
+        <div className="App">
+          <Switch>
+
+            {
+              noTabBarRoute.map((v, i) => (
+                <Route key={i} path={v.path} exact component={v.component}></Route>
+              ))
+            }
+            <Route path={"/"} component={Home}></Route>
+          </Switch>
+        </div>
       </Router>
     );
 
@@ -39,8 +37,6 @@ class App extends React.Component {
   componentDidMount(){
     
   }
-
-
 }
 
 
