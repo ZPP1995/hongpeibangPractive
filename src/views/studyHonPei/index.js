@@ -7,10 +7,10 @@ class StudyHopei extends Component {
   constructor() {
     super()
     this.classfyListImg = [
-      { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科" },
-      { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂" },
-      { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程" },
-      { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类" },
+      { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科",path:'/baike'},
+      { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂",path:'/university'},
+      { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程",path:'/lessonSeries' },
+      { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类",path:"/classify"},
     ]
     this.state = {
 
@@ -42,7 +42,7 @@ class StudyHopei extends Component {
           <div className={"shipu15"}>
             {
               this.classfyListImg.map((v, i) => (
-                <div className={"shipu16"} key={i}>
+                <div className={"shipu16"} key={i} onClick={() => { this.props.history.push({pathname:v.path}) }}>
                   <div className={"shipu17"}>
                     <img className={"shipu18"} src={"/img" + v.imgName} alt="" />
                   </div>
@@ -82,7 +82,8 @@ class StudyHopei extends Component {
           //零食伴手礼
           <div className="tuijian">
             <div className="tuijiantitle">
-              <p className="tuijiantitle1">推荐课程</p>
+              <p className="tuijiantitle1">零食伴手礼</p> 
+              <p className="findMore" >查看全部</p>
             </div>
             <div className="tuijianD">
               <ul className="tuijianDa">
@@ -91,7 +92,7 @@ class StudyHopei extends Component {
                   this.props.recommendList.map((v) => (
                     <li className="tuijiain_kuai" key={v.contentId}>
                       <div className="positongImg">
-                        <img src={"/img/"+v.coverImage.substring(30)} alt="" />
+                        <img src={"/img/"+v.coverImage.substring(30)} alt="" / >
                         <span>{v.buyNum/1>1000? "1000+人在学" : ""}</span>
                       </div>
                       <p>{v.coverTitle}</p>

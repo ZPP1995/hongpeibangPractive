@@ -8,7 +8,6 @@ import "./tarber.css"
 export default class TabBer extends Component {
     render() {
         return (
-
             <ul className="tabBar">
                 {
                     tabBarRoute[0].children.map((v, i) => (
@@ -20,7 +19,6 @@ export default class TabBer extends Component {
                     ))
                 }
             </ul>
-
         )
     }
 }
