@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import "./styled.css"
-// import { thisTypeAnnotation } from '@babel/types'
+import { bindActionCreators }from "redux"
 import { connect } from "react-redux"
+import recomendActionCreator from "../../store/actionCreator/recomend"
 class StudyHopei extends Component {
   constructor() {
     super()
@@ -55,7 +56,6 @@ class StudyHopei extends Component {
         {
           //推荐课程
           <div className="tuijian">
-
             <div className="tuijiantitle">
               <p className="tuijiantitle1">推荐课程</p>
             </div>
@@ -67,7 +67,32 @@ class StudyHopei extends Component {
                     <li className="tuijiain_kuai" key={v.contentId}>
                       <div className="positongImg">
                         <img src={"/img/"+v.coverImage.substring(30)} alt="" />
-                        <span>1000+人在学</span>
+                        <span>{v.buyNum/1>1000? "1000+人在学" : ""}</span>
+                      </div>
+                      <p>{v.coverTitle}</p>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+
+        }
+        {
+          //零食伴手礼
+          <div className="tuijian">
+            <div className="tuijiantitle">
+              <p className="tuijiantitle1">推荐课程</p>
+            </div>
+            <div className="tuijianD">
+              <ul className="tuijianDa">
+                {
+                  //https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50 
+                  this.props.recommendList.map((v) => (
+                    <li className="tuijiain_kuai" key={v.contentId}>
+                      <div className="positongImg">
+                        <img src={"/img/"+v.coverImage.substring(30)} alt="" />
+                        <span>{v.buyNum/1>1000? "1000+人在学" : ""}</span>
                       </div>
                       <p>{v.coverTitle}</p>
                     </li>
@@ -82,7 +107,7 @@ class StudyHopei extends Component {
     )
   }
   componentDidMount() {
-    //执行getRecomend
+    //执行getRecomend （推荐课程）
     this.props.getRecomend.call(this)
   }
 }
@@ -93,28 +118,28 @@ const mapStateToProps = ((state, props) => {
   }
 })
 
-function mapDispatchToProps(dispatch) {
-  return {
-    // 获得推荐数据
-    getRecomend() {
-      const _t = '1574910269042'
-      const csrfToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ'
-      const type = '3'
-      const pageSize = '10'
-      dispatch(() => {
-        this.$axios.get("/rec/recommend/getRandContent?_t=" + _t + "&csrfToken=" + csrfToken + "&type=" + type + "&pageSize=" + pageSize)
-          .then(({ data }) => {
-            console.log(data.data, 333);
-            dispatch({
-              type: "GET_RECOMEND",
-              payload:
-              {
-                recommendList: data.data
-              }
-            })
-          })
-      })
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(StudyHopei);
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     // 获得推荐数据
+//     getRecomend(dispatch) {
+//       const _t = '1574910269042'
+//       const csrfToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ'
+//       const type = '3'
+//       const pageSize = '10'
+//       dispatch(() => {
+//         this.$axios.get("/rec/recommend/getRandContent?_t=" + _t + "&csrfToken=" + csrfToken + "&type=" + type + "&pageSize=" + pageSize)
+//           .then(({ data }) => {
+//             console.log(data.data, 333);
+//             dispatch({
+//               type: "GET_RECOMEND",
+//               payload:
+//               {
+//                 recommendList: data.data
+//               }
+//             })
+//           })
+//       })
+//     }
+//   }
+// }
+export default connect(mapStateToProps, dispatch => bindActionCreators(recomendActionCreator,dispatch))(StudyHopei);
