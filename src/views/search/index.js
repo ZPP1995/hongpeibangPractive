@@ -51,7 +51,7 @@ export default class QuestionAndAnswer extends Component {
 
                                 <div className={"hongpei15"}>
                                     <div className={"hongpei16"}>
-                                        <img  className={"hongpei17"} src={"https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38"} />
+                                        <img  className={"hongpei17"} src={"https://image.hongbeibang.com/FlNyAtoE7VQRWghfLMIzjymlNTI2?48X48&imageView2/1/w/38/h/38"} alt=""/>
                                     </div>
                                     <div className={"hongpei18"}>
                                         <div className={"hongpei19"}>最近搜索</div>
