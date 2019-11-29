@@ -7,6 +7,8 @@ import Search from "../views/search"
 import LoginPhone from "../views/loginPhone"
 import Register from "../views/register"
 import Notice from "../views/notice"
+import Auth from '../views/auth'
+import Account from '../views/account'
 
 export const tabBarRoute = [
     {
@@ -62,9 +64,20 @@ export const noTabBarRoute = [
         name: "快速注册",
     },
     {
-        path: "/notice",
+        path: "/notice/10001",
         component: Notice,
         name: "服务条款",
+    },
+    {
+        path: "/auth",
+        component: Auth,
+        name: "注册",
+    },
+    {
+        path: "/account",
+
+        component: Account,
+        name: "注册成功",
     },
 
 ]

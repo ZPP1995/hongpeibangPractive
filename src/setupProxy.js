@@ -8,4 +8,11 @@ module.exports=function(app){
             "^/img":""
        }
     }))
+    app.use('/ll',proxy({
+        target:'http://127.0.0.1:8087',
+        changeOrigin:true,
+        pathRewrite:{
+            "^/ll":""
+       }
+    }))
 }

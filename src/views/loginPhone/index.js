@@ -10,12 +10,12 @@ import {
 import './loginPhone.css'
 
 export default class loginPhone extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state={
-    //         List:"none"
-    //     }
-    // }
+    constructor(){
+        super();
+        this.state={
+            user:""
+        }
+    }
     render(){
         return (
             <div>
@@ -37,7 +37,7 @@ export default class loginPhone extends React.Component{
                         </div>
                     </div>
                     <div className={"phone3"}>
-                    <input className={"input1"}  type="text" placeholder="输入手机账号" ref={"zhanghao"}></input>
+                    <input className={"input1"}  type="text" placeholder="输入手机账号" ref={"name"}></input>
                     </div>
                 </div>
 
@@ -46,13 +46,13 @@ export default class loginPhone extends React.Component{
                         <img className={"img-3"} src={"https://image.hongbeibang.com/FhVd-FHn1W_yhi5vMjtsAQGSicId?50X50&imageView2/1/w/50/h/50"} />
                     </div>
                     <div className={"mima2"}>
-                        <input className={"input2"}  type="password" placeholder="输入密码"/>
+                        <input className={"input2"} ref={"password"} type="password" placeholder="输入密码" onKeyUp={this.deng.bind(this)} />
                     </div>
                 </div>
 
                 <div className={"wangji"}>忘记密码？</div>
 
-                <div className={"dl"} onClick={this.login.bind(this)}>登录</div>
+                <div className={"dl"} ref={"deng"} onClick={this.login.bind(this)} >登录</div>
 
                 <div className={"disanfang"}>第三方帐号登录</div>
 
@@ -73,7 +73,7 @@ export default class loginPhone extends React.Component{
                         <div className={"tishi3"}>提示</div>
                         <div className={"tishi4"}>
                             <div className={"tishi5"}>
-                                <p className={"tishi6"}>请输入密码</p>
+                                <p className={"tishi6"}>密码budui</p>
                             </div>
                         </div>
                         <div className={"tishi7"}>
@@ -88,56 +88,63 @@ export default class loginPhone extends React.Component{
                         <div className={"tishi12"}>提示</div>
                         <div className={"tishi13"}>
                             <div className={"tishi14"}>
-                                <p className={"tishi15"}>请正确输入11位手机号码</p>
+                                <p className={"tishi15"}>手机号："{this.state.user}"未注册或者密码错误</p>
                             </div>
                         </div>
                         <div className={"tishi16"}>
                             <div className={"tishi17"} onClick={this.Handler.bind(this)}>确定</div>
                         </div>
                     </div>
-                </div>
-
-                
+                </div>               
             </div>
         )
     }
 
     addHandler(){
-        console.log(1)
         this.refs.shi.style.display = "none"
     }
     Handler(){
         this.refs.ti.style.display = "none"
     }
-    login(){
-        if(this.refs.zhanghao.value.length === 11){
+    async login(){
+        const data = await axios.get("/ll/denglu",{
+            params:{
+                zhanghao:this.refs.name.value,
+                password:this.refs.password.value
+            }
+        })
+        console.log(data)
+
+        if(this.refs.name.value === data.data.phoneId && this.refs.password.value === data.data.mima){
+           
+            if(data.data.ok === 1){
+                this.props.history.push("/")
+            }
+            // this.refs.shi.style.display = "block"
+        }
+        if(data.data.ok===2){
+            this.getgeng()
+            this.refs.ti.style.display = "block"           
+        }
+       
+        
+    }
+    getgeng(){
+        console.log(11)
+        this.setState({
+            user:this.refs.name.value
+        })
+    }
+    deng(e){
+        if(e.target.value.length>5 && this.refs.name.value.length === 11 ){
             console.log(111)
-            this.refs.shi.style.display = "block"
+            this.refs.deng.style.opacity = 1
         }else{
-            console.log(222)
-            this.refs.ti.style.display = "block"
+            this.refs.deng.style.opacity = 0.5
         }
     }
-   componentDidMount(){
-    
-       
-   }
-  
+    componentDidUpdate(){
+        
+    }
 }
-// function mapStateToProps(state) {
-//     return {
 
-//     }
-// }
-// function mapDispatchToProps(dispatch){
-//     return {
-//         addHadnler(){
-//             this.refs.tishi.style.display = "none"
-//         },
-//         login(){
-//             this.refs.tishi.style.display = "block"
-//         }
-//     }
-// }
-
-//  connect(mapStateToProps,mapDispatchToProps)(loginPhone)

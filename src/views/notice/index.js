@@ -11,7 +11,7 @@ export default class Notice extends React.Component{
             <div>
                 <div className={"tiaokuan"}>
                     <span className={"jiantou"}>
-                        <img className={"imgt1"} src={"https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"} />
+                        <img onClick={()=>{this.props.history.push("/login")}} className={"imgt1"} src={"https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"} />
                     </span>
                     <ul className={"tiaokuan1"}>烘焙帮</ul>
                     <div className={"tiaokuan2"}></div>
