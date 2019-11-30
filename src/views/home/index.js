@@ -6,7 +6,7 @@ import TabBer from  "../../components/tarber/index"
 export default class Home extends React.Component {
     render() {
         return (
-            <div className="mainCon">
+          <div className="mainCon">
            <div className="contextCon">
                 {
                     tabBarRoute[0].children.map((v, i) => (
