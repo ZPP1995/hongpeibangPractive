@@ -1,18 +1,30 @@
-import React, { Component } from 'react'
-import "./styled.css"
-import { bindActionCreators }from "redux"
-import { connect } from "react-redux"
-import recomendActionCreator from "../../store/actionCreator/recomend"
+import React, { Component } from 'react';
+import "./styled.css";
+import { bindActionCreators }from "redux";
+import { connect } from "react-redux";
+import recomendActionCreator from "../../store/actionCreator/recomend";
 class StudyHopei extends Component {
-    constructor() {
-        super()
-        this.classfyListImg = [
-            { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科",path:'/baike'},
-            { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂",path:'/university'},
-            { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程",path:'/lessonSeries' },
-            { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类",path:"/classify"},
-        ]
-        this.state = {
+
+    // constructor() {
+    //     super();
+    //     this.classfyListImg = [
+    //         { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科",path:'/baike'},
+    //         { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂",path:'/university'},
+    //         { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程",path:'/lessonSeries' },
+    //         { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类",path:"/classify"},
+    //     ]
+    //     this.state = {
+
+  constructor() {
+    super();
+    this.classfyListImg = [
+      { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科",path:'/baike'},
+      { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂",path:'/university'},
+      { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程",path:'/lessonSeries' },
+      { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类",path:"/classify"},
+    ]
+    this.state = {
+
 
         }
     }
@@ -38,6 +50,15 @@ class StudyHopei extends Component {
                     </div>
                 </div>
 
+        <div className={"shipu14"}>
+          <div className={"shipu15"}>
+            {
+              this.classfyListImg.map((v, i) => (
+                <div className={"shipu16"} key={i} onClick={() => { this.props.history.push({pathname:v.path}) }}>
+                  <div className={"shipu17"}>
+                    <img className={"shipu18"} src={"/img" + v.imgName} alt="" />
+                  </div>
+                  <div className={"shipu19"}>{v.title}</div>
                 <div className={"shipu14"}>
                     <div className={"shipu15"}>
                         {
@@ -77,7 +98,27 @@ class StudyHopei extends Component {
                             </ul>
                         </div>
                     </div>
-
+        }
+        {
+          //零食伴手礼
+          <div className="tuijian">
+            <div className="tuijiantitle">
+              <p className="tuijiantitle1">零食伴手礼</p> 
+              <p className="findMore" >查看全部</p>
+            </div>
+            <div className="tuijianD">
+              <ul className="tuijianDa">
+                {
+                  //https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50 
+                  this.props.recommendList.map((v) => (
+                    <li className="tuijiain_kuai" key={v.contentId}>
+                      <div className="positongImg">
+                        <img src={"/img/"+v.coverImage.substring(30)} alt=""/>
+                        <span>{v.buyNum/1>1000? "1000+人在学" : ""}</span>
+                      </div>
+                      <p>{v.coverTitle}</p>
+                    </li>
+                  ))
                 }
                 {
                     //零食伴手礼

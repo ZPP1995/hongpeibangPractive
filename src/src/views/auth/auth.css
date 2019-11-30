@@ -1,0 +1,251 @@
+*{
+    margin:0;
+}
+
+.zuihou{
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.zuihou1{
+    padding: 0px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.zuihou2{
+    background: #FFFFFF;
+    height: 44px;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.zuihou3{
+    float: left;
+    color: #1976D2;
+    margin: 7px 0;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 30px;
+}
+.zuihou4{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 90px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -otext-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.zuihou5{
+    height: 44px;
+    overflow: hidden;
+    zoom: 1;
+}
+.zuihou6{
+    overflow: hidden;
+    padding: 0 13px;
+    margin: 0 auto;
+}
+.zuihou7{
+    height: 100px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.zuihou8{
+    color: #4A4945;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.zuihou9{
+    font-size: 16px;
+    text-align: center;
+    color: #4A4945;
+    font-weight: bold;
+}
+.zuihou10{
+    font-size: 14px;
+    line-height: 65px;
+    height: 65px;
+    cursor: pointer;
+    color: #1976D2;
+    text-decoration: underline;
+    float: right;
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
+    width: 70px;
+}
+.zuihou11{
+    margin-right: 94px;
+    overflow: hidden;
+    border-bottom: 1px solid;
+    border-bottom-color: #E7E2E5;
+}
+.zuihou12{
+    height: 35px;
+    line-height: 35px;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    padding: 0px;
+    margin: 15px 0;
+    border-radius: 0px;
+    width: 100%;
+    color: #4A4945;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.zuihou13{
+    float: right;
+    height: 65px;
+    line-height: 65px;
+    color: #1976D2;
+    font-size: 14px;
+    margin-right: 20px;
+    width: 70px;
+}
+.zuihou14{
+    margin-right: 94px;
+    overflow: hidden;
+}
+.zuihou15{
+    height: 35px;
+    line-height: 35px;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    padding: 0px;
+    margin: 15px 0;
+    border-radius: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #4A4945;
+    border: none;
+    outline: none;
+}
+.zuihou16{
+    margin: 43px auto 0 auto;
+    opacity: 0.5;
+    background-image: linear-gradient(to right,#0096FB,#1976D2);
+    font-size: 18px;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.zuihou17{
+    box-sizing: border-box;
+    color: #999999;
+    font-size: 14px;
+    line-height: 15px;
+    width: 70px;
+    padding: 5px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 25px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display:none;
+}
+
+.zuihou18{
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 99999;
+    text-align: center;
+    display: none;
+
+}
+.zuihou19{
+    height: 100%;
+    line-height: inherit;
+    width: 0;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.zuihou20{
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    width: 80%;
+    margin: auto;
+    min-height: 130px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 330px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .35);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, .35);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .35);
+}
+.zuihou21{
+    color: #4A4945;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    margin: 15px 20px;
+    font-weight: bold;
+}
+.zuihou22{
+    color: #4A4945;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 20px 18px 20px;
+}
+.zuihou23{
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+}
+.zuihou24{
+    text-align: right;
+}
+.zuihou25{
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    color: #79BAF9;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    margin-right: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
