@@ -25,7 +25,7 @@ export default class Content extends React.Component {
                         })
                     }}>
                         <span>
-                            精华问答
+                            {/*精华问答*/}
                             <div className={"s9b31ec9"}
                                  style={{display: this.state.index === 0 ? "block" : "none"}}></div>
                         </span>
@@ -37,7 +37,7 @@ export default class Content extends React.Component {
                         })
                     }}>
                         <span>
-                            最新问题
+                            {/*最新问题*/}
                             <div className={"s9b31ec9"}
                                  style={{display: this.state.index === 1 ? "block" : "none"}}></div>
                         </span>
@@ -49,7 +49,7 @@ export default class Content extends React.Component {
                         })
                     }}>
                         <span>
-                            最热问题
+                            {/*最热问题*/}
                             <div className={"s9b31ec9 active"}
                                  style={{display: this.state.index === 2 ? "block" : "none"}}></div>
                         </span>
@@ -61,7 +61,7 @@ export default class Content extends React.Component {
                     {
                         this.state.essenceList.map(v => (
                             <Fragment key={v.contentId}>
-                                <div className={"s3f974129"}>
+~                                <div className={"s3f974129"}>
                                     <div className={"s1ada1931"}>
                                         <div className={"s-1c89ddc8"}>
                                             <img className={"s33fa2c34"} src={v.clientImage} alt=""/>
