@@ -28,7 +28,6 @@ export default class Herder extends React.Component {
                 {/*<div className="s7e1f0f36"></div>*/}
             </header>
         )
-
     }
 }
 
