@@ -5,14 +5,14 @@ import {
   BrowserRouter as Router
 } from "react-router-dom"
 import Home from "./views/home"
-import { noTabBarRoute } from "./router"
+import {noTabBarRoute} from "./router"
 import './App.css';
 /*
 * Home组件，包含导航
 * 其它组件不包含，比如Login*/
 
-class App extends React.Component {
 
+class App extends React.Component {
   render() {
     return (
       <Router>
@@ -29,13 +29,12 @@ class App extends React.Component {
       </Router>
     );
 
-  }
-  componentDidMount() {
- 
-  }
 
+  }
+  componentDidMount(){
+    
+  }
 }
-
 
 
 export default App;
