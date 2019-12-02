@@ -1,0 +1,61 @@
+
+.videoCenter{
+    width:600px;
+    height:80px;
+    background-color: white;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.videoCenter img{
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    top: 27px;
+}
+.videoCenter .box{
+    width:536px;
+    height:85px;
+    position:relative;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.videoCenter ul{
+display:flex;
+justify-content:space-between;
+width:600px;  
+padding:0px 55px;
+margin-top:30px;
+
+}
+.videoCenter ul li{
+    
+    font-size: 24px;
+    text-align:center;
+
+}
+.videoCenter ul .activeLi{
+    font-weight: bold;
+}
+.videoCenter ul li .activeP{
+    width:40px;
+    height:5px;
+    background:#E98B71;
+    margin:0 auto;
+    margin-top:5px;
+    border-radius:8px;
+}
+.swiper-container{
+    width: 600px;
+    margin: 0 auto;
+}
+.swiper-container img{
+   width: 600px;
+   text-align: center;
+}
+.universityShow{
+    display: block;
+}
+.universityHidden{
+    display: none;
+}

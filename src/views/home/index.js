@@ -13,6 +13,7 @@ export default class Home extends React.Component {
                         <Route exact key={i} path={v.path}  component={v.component}></Route>
                     ))
                 }
+                
                 <TabBer></TabBer>
             </div>
         )

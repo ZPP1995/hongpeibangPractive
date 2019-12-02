@@ -7,9 +7,6 @@ import {
 import Home from "./views/home"
 import { noTabBarRoute } from "./router"
 import './App.css';
-
-
-
 /*
 * Home组件，包含导航
 * 其它组件不包含，比如Login*/

@@ -6,10 +6,10 @@ class StudyHopei extends Component {
   constructor() {
     super()
     this.classfyListImg = [
-      { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科" },
-      { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂" },
-      { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程" },
-      { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类" },
+      { imgName: "/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80", title: "技巧百科" ,path:'/baike'},
+      { imgName: "/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80", title: "视频学堂", path:'/university'},
+      { imgName: "/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80", title: "新手教程",path:"/lessonSeries" },
+      { imgName: "/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80", title: "食谱分类"},
     ]
     this.state = {
 
@@ -41,7 +41,7 @@ class StudyHopei extends Component {
           <div className={"shipu15"}>
             {
               this.classfyListImg.map((v, i) => (
-                <div className={"shipu16"} key={i}>
+                <div className={"shipu16"} key={i} >
                   <div className={"shipu17"}>
                     <img className={"shipu18"} src={"/img" + v.imgName} alt="" />
                   </div>
@@ -88,6 +88,7 @@ class StudyHopei extends Component {
 }
 
 const mapStateToProps = ((state, props) => {
+  console.log(state,2332)
   return {
     recommendList: state.recomend.recommendList
   }
