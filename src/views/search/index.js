@@ -12,6 +12,7 @@ export default  class QuestionAndAnswer extends Component {
     }
     render() {
         return (
+
             <div className={"hongpei"}>
                 <div className={"hongpei1"}>
                     {
@@ -30,6 +31,7 @@ export default  class QuestionAndAnswer extends Component {
                         //最近搜索
                         <LastestSearch></LastestSearch>
                     }
+
 
                     
                 </div>

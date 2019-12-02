@@ -118,7 +118,7 @@ export default class Content extends React.Component {
                             </Fragment>
                         ))
                     }
-                    <div style={{height: "50px"}}></div>
+                    {/*<div style={{height: "50px"}}></div>*/}
                 </div>
 
 
@@ -171,7 +171,7 @@ export default class Content extends React.Component {
                 pageSize: 10
             }
         }).then(({data}) => {
-            console.log(data.content.data)
+            // console.log(data.content.data)
             this.setState({
                 questionList: data.content.data
             })
@@ -183,7 +183,7 @@ export default class Content extends React.Component {
                 pageSize: 10
             }
         }).then(({data}) => {
-            console.log(data.content.data)
+            // console.log(data.content.data)
             this.setState({
                 essenceList: data.content.data
             })
@@ -195,7 +195,7 @@ export default class Content extends React.Component {
                 pageSize: 10
             }
         }).then(({data}) => {
-            console.log(data.content.data)
+            // console.log(data.content.data)
             this.setState({
                 hotList: data.content.data
             })
