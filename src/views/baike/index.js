@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 
-class Baike  extends Component{
+export default class Baike extends Component {
     render() {
         return (
             <div>
-           12323
-            
+            Baike
             </div>
         )
     }
 }
-export default Baike

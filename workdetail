@@ -3,7 +3,9 @@
 问答https://www.hongbeibang.com/questionAndAnswer
 小窝https://www.hongbeibang.com/client/3115464?isFromIndex=true
 登录https://www.hongbeibang.com/login
+
 搜索https://www.hongbeibang.com/search
+搜索详情页https://www.hongbeibang.com/search/recipe/%F0%9F%94%A5%E5%90%90%E5%8F%B8
 上传https://www.hongbeibang.com/
 技巧百科https://www.hongbeibang.com/baike
 视频学堂https://www.hongbeibang.com/university
@@ -12,14 +14,15 @@
 
 
 /************************** 孙忠任 *****************************/
+视频学堂https://www.hongbeibang.com/university
 
 
 /**************************** 张盼盼 ***************************/
 
 路由
-首页
 学烘培https://www.hongbeibang.com/
-
+搜索https://www.hongbeibang.com/search
+搜索详情页https://www.hongbeibang.com/search/recipe/%F0%9F%94%A5%E5%90%90%E5%8F%B8
 
 /**************************陈健飞*****************************/
 

@@ -5,6 +5,8 @@ import Client from "../views/client"
 
 import Login from "../views/login"
 import Search from "../views/search"
+
+
 import University from "../views/university"
 import Baike from "../views/baike"
 import LessonSeries from "../views/lessonSeries"
@@ -15,6 +17,7 @@ import Notice from "../views/notice"
 import Auth from '../views/auth'
 import Account from '../views/account'
 import Recipe from "../components/QuestionAndAnswer/recipe"
+
 
 export const tabBarRoute = [
     {

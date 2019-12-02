@@ -27,9 +27,7 @@ export default {
         return async (dispatch) => {
             const { data } =await this.$axios.get("/rec/recommend/getRandContent?_t=" + _t + "&csrfToken=" + csrfToken + "&type=" + type + "&pageSize=" + pageSize)
             console.log(data.data, 333);
-            dispatch(upRecomend({
-                    recommendList: data.data
-                })
+            dispatch(upRecomend( {recommendList: data.data} )
             )
         }
     }

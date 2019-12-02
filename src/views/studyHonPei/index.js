@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
 import "./styled.css"
+<<<<<<< HEAD
 import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import recomendActionCreator from "../../store/actionCreator/recomend.js"
 
+=======
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
+import recomendActionCreator from "../../store/actionCreator/recomend"
+>>>>>>> b3b7655d9d542f2fb2ab09aa035dffb9470a53e9
 class StudyHopei extends Component {
+
     constructor() {
         super()
         this.classfyListImg = [
@@ -42,6 +49,7 @@ class StudyHopei extends Component {
                 <img className={"shipu12"} src={"/img/FltPAS-35CZfvSpnHacXWoqcfFz5?42X42&imageView2/1/w/42/h/42"}
                      alt=""/>
               </span>
+
                             <span className={"shipu13"}>搜索食谱/食材，烘焙/家常菜一应俱全</span>
                         </div>
                     </div>
@@ -61,6 +69,7 @@ class StudyHopei extends Component {
                             ))
                         }
                     </div>
+
                 </div>
 
                 {
@@ -128,6 +137,7 @@ const mapStateToProps = ((state, props) => {
     return {
         recommendList: state.recomend.recommendList
     }
+
 })
 
 // function mapDispatchToProps(dispatch) {

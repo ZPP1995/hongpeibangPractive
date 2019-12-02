@@ -1,0 +1,43 @@
+.pumain{
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.puimg{
+    width: 260px;
+    height: 426px;
+    margin:10px 20px;
+    position: relative;
+}
+.puimg img{
+    width: 260px;
+    height: 358px;
+}
+.puimg span {
+    display: block;
+    width: 97px;
+    height: 28px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 80px;
+    left: 5px;
+    color: #4A4945;
+    font-size: 17.6px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+}
+.puimg p{
+    width: 260px;
+    height: 68px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32.4px;
+    overflow: hidden;      
+    text-overflow: ellipsis;      
+    display: -webkit-box; /* 将对象作为弹性伸缩盒子模型显示 */      
+   -webkit-line-clamp: 2; /* 控制最多显示几行 */      
+   -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */
+}

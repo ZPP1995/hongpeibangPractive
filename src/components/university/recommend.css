@@ -1,0 +1,83 @@
+
+.reheader{
+    width: 600px;
+    height:80px;
+    margin:0 auto;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.reheader p:first-child{
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    line-height: 27px;
+    font-size: 27px;
+    color: #313131;
+    font-weight: bold;
+}
+.reheader p:last-child{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: right;
+    color: #999999;
+}
+.rehidden{
+    width: 600px;
+    height:432px ;
+   
+    margin: 0 auto;
+    overflow-y: hidden;
+ }
+.remain{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    overflow-x: scroll;
+   
+}
+.reimg{
+   display: flex;
+   justify-content: space-between;
+}
+.reimg div{
+    width: 256px;
+    height: 424px;
+    margin-left: 20px;
+    position: relative;
+}
+.reimg img{
+    
+    width: 256px;
+    height: 360px;
+}
+.reimg span {
+    display: block;
+    width: 97px;
+    height: 28px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 80px;
+    left: 5px;
+    color: #4A4945;
+    font-size: 17.6px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+}
+.reimg p{
+    width: 256px;
+    height: 64px;
+    color: #4A4945;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32.4px;
+    overflow: hidden;      
+    text-overflow: ellipsis;      
+    display: -webkit-box; /* 将对象作为弹性伸缩盒子模型显示 */      
+   -webkit-line-clamp: 2; /* 控制最多显示几行 */      
+   -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */ 
+}
