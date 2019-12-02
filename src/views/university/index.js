@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './university.css'
 import Swipe from '../../components/university/swipe'
@@ -70,3 +71,5 @@ import actionUniver from '../../store/actionCreator/university'
        }
     }
 }
+
+

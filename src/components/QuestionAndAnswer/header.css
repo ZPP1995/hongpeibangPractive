@@ -1,8 +1,11 @@
+.App-header{
+    /*position: absolute;*/
+}
 .s30153804 {
+    position: fixed;
     background: #FFFFFF;
     height: 44px;
     z-index: 6;
-    /*position: fixed;*/
     top: 0;
     left: 0;
     right: 0;
@@ -13,11 +16,9 @@
 }
 .s7d4f25eb {
     margin: 7px 0;
-    position: relative;
     z-index: 1;
     font-size: 16px;
     line-height: 30px;
-    /*color: #4A4945;*/
     float: left;
     color: #E98B71;
 }
@@ -28,7 +29,6 @@
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    position: relative;
     z-index: 1;
     float: right;
 }
@@ -72,14 +72,15 @@ img {
 .s-362be723 {
     height: 0;
     width: 0;
+    z-index: 6;
     margin: 0;
     padding: 0;
     border: none;
     outline: none;
     line-height: normal;
 }
-.s7e1f0f36 {
-    height: 44px;
-    overflow: hidden;
-    zoom: 1;
-}
+/*.s7e1f0f36 {*/
+    /*height: 44px;*/
+    /*overflow: hidden;*/
+    /*zoom: 1;*/
+/*}*/
