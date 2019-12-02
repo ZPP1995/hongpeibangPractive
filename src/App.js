@@ -10,9 +10,6 @@ import './App.css';
 /*
 * Home组件，包含导航
 * 其它组件不包含，比如Login*/
-
-
-
 class App extends React.Component {
   render() {
     return (
