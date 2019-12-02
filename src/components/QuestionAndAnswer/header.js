@@ -1,15 +1,16 @@
 import React from "react";
-import './header.css'
+import './header.css';
 // import {Link} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 
-export default class Herder extends React.Component {
+class Herder extends React.Component {
     render() {
         return (
             <header className={"App-header"}>
                 <div className="s30153804">
                     <span className="s7d4f25eb">
-                        {/*提问*/}
+                        提问
                     </span>
                     <span className="s-3613cfc6">
                         <img className="s-6a5cf0dc"
@@ -17,11 +18,11 @@ export default class Herder extends React.Component {
                              alt=""/>
                     </span>
                     <div className="s2ca81225">
-                        <div className="s60de47cb">
+                        <div className="s60de47cb" onClick={this.pushSearch.bind(this)}>
                             <span className="s-3448c132">
-                                {/*搜索问题*/}
+                                搜索问题
                             </span>
-                            <input className="s-362be723"/>
+                            {/*<input className="s-362be723"/>*/}
                         </div>
                     </div>
                 </div>
@@ -30,5 +31,15 @@ export default class Herder extends React.Component {
         )
 
     }
+
+    pushSearch() {
+        this.props.history.push("/search")
+    }
+
+    componentDidMount() {
+
+    }
+
 }
 
+export default withRouter(Herder)

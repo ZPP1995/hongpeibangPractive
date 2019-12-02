@@ -107,14 +107,14 @@ export default class loginPhone extends React.Component{
         })
         console.log(data)
 
-        if(this.refs.name.value === data.data.phoneId && this.refs.password.value === data.data.mima){
+        if(this.refs.name.value === data.phoneId && this.refs.password.value === data.mima){
            
-            if(data.data.ok === 1){
+            if(data.ok === 1){
                 this.props.history.push("/")
             }
             // this.refs.shi.style.display = "block"
         }
-        if(data.data.ok===2){
+        if(data.ok===2){
             this.getgeng()
             this.refs.ti.style.display = "block"           
         }

@@ -15,7 +15,7 @@ export default class QuestionAndAnswer extends Component {
                                     <div className={"hongpei6"}>
                                         <div className={"hongpei7"}>
                                             <div className={"hongpei8"}>
-                                            <input type="text" className={"hongpei9"} placeholder="搜索食谱/食材，烘焙/家常菜一应俱全"  />
+                                            <input type="text" className={"hongpei9"} placeholder="搜索食谱/食材，烘焙/家常菜一应俱全"/>
                                             </div>
                                         </div>
                                     </div>
