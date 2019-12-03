@@ -13,7 +13,7 @@ export default class TabBer extends Component {
                     tabBarRoute[0].children.map((v, i) => (
                         <NavLink exact key={i} to={v.path} activeClassName="actived">
                             <div className="imgCon"><img src={"/img" + v.imgSrc} alt=""/></div>
-                            <div>{v.name}</div>
+                            <div className="tabBarname">{v.name}</div>
                         </NavLink>
 
                     ))

@@ -76,16 +76,16 @@
  }
  html, body{
      width: 100%;
-    
+    font-size:14px;
      font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑", sans-serif;
  }
  body{
      line-height: 1;
      -webkit-text-size-adjust: none;
      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     background-color: #F5F7F9;
  }
  html{
-     overflow-y: scroll;
     
  }
  
@@ -107,6 +107,4 @@
      display: none;
  }
  
- #root{
-    background-color: #F5F7F9;
- }
+ 

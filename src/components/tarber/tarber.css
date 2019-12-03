@@ -1,11 +1,10 @@
 .tabBar{
-  width: 100%;
-    max-width: 600px;
-    height:49px;
+    width:100%;
+    height:50px;
     position:fixed;
     bottom: 0px;
     background-color: #FFFFFF;
-    height: 49px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     color: #999999;
@@ -15,7 +14,6 @@
  
   .tabBar  a{
     font-size: 11px;
-  
   }
   .imgCon{
     text-align: center;
@@ -24,9 +22,15 @@
   .imgCon img{ 
     width: 25px;
     height: 25px;
+    color: #999999;
     }
   
   .actived{
-    color: #313131;
+  /* color: #313131; */
+  color: black;
+  }
+  .tabBarname{
+    font-size: 11px;
+    color: #999999;
   }
   
