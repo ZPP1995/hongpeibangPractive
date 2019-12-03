@@ -31,6 +31,7 @@ class StudyHopei extends Component {
                             <span className={"shipu11"}>
                                 <img className={"shipu12"} src={"/img/FltPAS-35CZfvSpnHacXWoqcfFz5?42X42&imageView2/1/w/42/h/42"} alt="" />
                             </span>
+
                             <span className={"shipu13"}>搜索食谱/食材，烘焙/家常菜一应俱全</span>
                         </div>
                     </div>
