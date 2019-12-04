@@ -6,6 +6,9 @@ import actionUniver from '../../store/actionCreator/university'
 import {
   connect
 }from 'react-redux'
+import {
+    withRouter
+} from 'react-router-dom'
  class Recommend extends Component {
     render() {
         return (
@@ -22,7 +25,7 @@ import {
                    <div className='reimg'>
                {
                  v.item.map((v,i)=>(
-                   <div key={v.contentId}>
+                   <div key={v.contentId} onClick={()=>this.props.history.push({pathname:'/lesson',state:{educationCourseId:v.educationCourseId,clientId:v.clientId}})}>
                    <img src={v.image}/>
                    <span>{v.buyNum >1000?'1000+'+'在学':v.buyNum+'在学'}</span>
                    <p>{v.title}</p>
@@ -45,6 +48,7 @@ import {
 }
 
 function mapStateToProps(state){
+  // console.log(state,67777777)
   return{
      state:state.university
   }
@@ -58,4 +62,6 @@ function mapDispatchToProps(dispatch){
         }
       }
     }
-export default connect(mapStateToProps,mapDispatchToProps)(Recommend)
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Recommend))
+
+ 

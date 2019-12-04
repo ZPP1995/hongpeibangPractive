@@ -1,9 +1,16 @@
 import React from 'react'
 import Swiper from 'swiper/js/swiper.js'
 import 'swiper/css/swiper.min.css'
-export default class Recommend extends React.Component {
+import store from '../../store'
+import actionUniver from '../../store/actionCreator/university' 
+import './public.css'
+import {
+  connect
+}from 'react-redux'
+ class Swipers extends React.Component {
     render() {
         return (
+            
     <div className="swiper-container" >
     <div className="swiper-wrapper" >
     <div className="swiper-slide"><img src='https://image.hongbeibang.com/FiPvrx5_vvx4npvCnT_4F-_TFeDc?1380X700&imageView2/1/w/750/h/380'/></div>
@@ -15,10 +22,30 @@ export default class Recommend extends React.Component {
     </div>
     <div className="swiper-pagination"></div>
     </div>
+        
+        //   <div  className="swiper-container">
+        //   <div className="swiper-wrapper">
+        //     {
+              
+        //         this.props.info.map((v,i)=>(
+         
+        //          <>{i===0?v.item.map((v,i)=>( 
+        //         <div className="swiper-slide" key={v.categoryItemId}>
+        //         <img src={v.image}/>
+        //         </div>
+        //          )):null}</>
+
+        //         ))
+                                   
+        //     }
+        //   </div>
+        //   <div className="swiper-pagination"></div>      
+        // </div>
+
         )
     }
-    componentDidMount(){
-    new Swiper('.swiper-container', {
+    swiper(){
+           return new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -30,6 +57,24 @@ export default class Recommend extends React.Component {
             speed:500,
             slidesPerView: 1,
             loop : true,
-        });
+        })
     }
+    componentDidMount(){
+        this.swiper()
+        this.props.getSwipers()
+        // console.log(22222)
 }
+}
+function mapStateToProps(state){
+  return{
+    info:state.swiper
+  }
+}
+function mapDispatchToProps(dispatch){
+      return {
+        getSwipers(){
+          dispatch(actionUniver.getSwiper())
+        }
+      }
+    }
+export default connect(mapStateToProps,mapDispatchToProps)(Swipers)

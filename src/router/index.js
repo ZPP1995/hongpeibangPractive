@@ -6,7 +6,6 @@ import Client from "../views/client"
 import Login from "../views/login"
 import Search from "../views/search"
 import SearchRecipe from "../views/searchRecipe"
-
 import University from "../views/university"
 import Baike from "../views/baike"
 import LessonSeries from "../views/lessonSeries"
@@ -16,6 +15,9 @@ import Register from "../views/register"
 import Notice from "../views/notice"
 import Auth from '../views/auth'
 import Account from '../views/account'
+
+import VideoLesson from '../views/videolesson'
+
 import Recipe from "../components/QuestionAndAnswer/recipe"
 
 
@@ -112,11 +114,19 @@ export const noTabBarRoute = [
         path: "/account",
         component: Account,
         name: "注册成功",
-    }, {
+
+    },
+     {
         path: "/recipe",
         component: Recipe,
         name: "recipe"
-    }
+    },
+    {
+        path:'/lesson',
+        component:VideoLesson,
+        name:'视频播放'
+
+    },
 
 ]
 

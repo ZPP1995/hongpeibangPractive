@@ -7,7 +7,7 @@ const initData={
 const searchReducer = function(state=initData,action){
      state =JSON.parse(JSON.stringify(state))
      if(action.type==="GET_SEARCH"){
-         console.log(action.payload,5555);
+        //  console.log(action.payload,5555);
          state=action.payload
      }
 //reducer返回什么，state就是什么
