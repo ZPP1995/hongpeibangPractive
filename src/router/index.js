@@ -16,7 +16,11 @@ import Register from "../views/register"
 import Notice from "../views/notice"
 import Auth from '../views/auth'
 import Account from '../views/account'
+
 import VideoLesson from '../views/videolesson'
+
+import Recipe from "../components/QuestionAndAnswer/recipe"
+
 
 export const tabBarRoute = [
     {
@@ -38,7 +42,7 @@ export const tabBarRoute = [
                 path: "/questionAndAnswer",
                 component: QuestionAndAnswer,
                 name: "问答",
-                imgSrc: "/Fj5pW1jZYwlS9rB3h_nsvXNptuPX?50X50&imageView2/1/w/50/h/50"
+                imgSrc: "/Fj5pW1jZYwlS9rB3h_nsvXNptuPX?50X50&imageView2/1/w/50/h/50",
             },
             {
                 path: "/client",
@@ -106,14 +110,22 @@ export const noTabBarRoute = [
         path: "/account",
         component: Account,
         name: "注册成功",
+
     },
     {
         path:'/lesson',
         component:VideoLesson,
         name:'视频播放'
+
+    },{
+        path:"/recipe",
+        component:Recipe,
+        name:"recipe"
+
     }
 
 ]
+
 
 // concat 连接两个数组返回一个新数组 routeConfig
 //export const routeConfig = tabBarRoute.concat(noTabBarRoute)
