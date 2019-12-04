@@ -5,7 +5,7 @@ import Client from "../views/client"
 
 import Login from "../views/login"
 import Search from "../views/search"
-
+import SearchRecipe from "../views/searchRecipe"
 
 import University from "../views/university"
 import Baike from "../views/baike"
@@ -56,6 +56,11 @@ export const noTabBarRoute = [
         path: "/search",
         component: Search,
         name: "搜索",
+        children: {
+            path: "/search/recipe",
+            component: SearchRecipe,
+            name: "搜索列表页",
+        }
     },
     {
         path: "/login",
@@ -82,8 +87,8 @@ export const noTabBarRoute = [
         component: Classify,
         name: "食谱分类",
     },
-   
-   {
+
+    {
         path: "/loginPhone",
         component: LoginPhone,
         name: "其他登陆",
@@ -107,10 +112,10 @@ export const noTabBarRoute = [
         path: "/account",
         component: Account,
         name: "注册成功",
-    },{
-        path:"/recipe",
-        component:Recipe,
-        name:"recipe"
+    }, {
+        path: "/recipe",
+        component: Recipe,
+        name: "recipe"
     }
 
 ]

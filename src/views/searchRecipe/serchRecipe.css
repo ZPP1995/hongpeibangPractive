@@ -1,0 +1,110 @@
+.serchRecipe{
+    width: 100%;
+    height:100%;
+}
+
+.headerCon{
+    width: 600px;
+    height: 44px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 6;
+}
+
+.headerCon1{
+   display:flex;
+   justify-content:space-around;
+   padding: 0 18px;
+}
+
+.headerCon2{
+    width: 27px;
+    height: 27px;
+    margin: 9.5px 0;
+}
+.headerCon2 img{
+    width: 100%;
+    height:100%;
+}
+.headerCon5{
+    height:35px;
+    width: 429px;
+    margin:4.5px 0;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    display:flex;
+}
+.headerCon5 input{
+    height:100%;
+    width: 90%;
+    background-color: #F5F7F9;
+    padding: 5px 0;
+    box-sizing: border-box;
+    line-height: 25px;
+    color: #4A4945;
+    font-size: 14px;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+}
+.headerCon6{
+    height:35px;
+    width: 35px;
+}
+.headerCon6 img{
+    height:100%;
+    width: 100%;
+}
+.headerCon33{
+    line-height: 44px;
+    margin-right: 10px;
+}
+.headerCon3{
+    font-size: 14px;
+    color: #E98B71; 
+}
+.headerCon4{
+    width: 19px;
+    height:19px;
+    line-height: 44px;
+}
+
+.headerCon4 img{
+    width: 19px;
+    height: 19px;
+    padding-top:5px;
+}
+
+
+.searchListCon1{
+    width:600px;
+    height:46px;
+    position:fixed;
+    top:44px;
+    background-color:white;
+}
+.searchListCon2{
+    font-size: 14px;
+    width: 600px;
+    height: 30px;
+    padding-top:8px;
+    text-align: center;
+    line-height: 30px;
+    display:flex;
+    justify-content: space-around;
+}
+.noActive{
+    color: #999999;
+}
+.Active{
+    color: #4A4945;
+    font-weight: bold;
+    border-bottom:solid 2px #E98B71 ;
+}

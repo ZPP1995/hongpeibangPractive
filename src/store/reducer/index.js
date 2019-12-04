@@ -7,13 +7,14 @@ import getIndexReducer from "./getIndexByWeb"
 import recomendReducer from "./recomend"
 //搜索页面
 import searchReducer from  "./search"
-
+//搜索详情页面
+import getMoreRecipeReducer from "./getMoreRecipe"
 
  const reducer=combineReducers({
     recomend:recomendReducer,
     search:searchReducer,
     getIndex:getIndexReducer,
-    
+    getMoreRecipe:getMoreRecipeReducer,
     university,
     publi,
 })

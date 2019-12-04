@@ -55,10 +55,5 @@ class StudyHopei extends Component {
             </div>
         )
     }
-
 }
-
-
-
-
 export default StudyHopei;
