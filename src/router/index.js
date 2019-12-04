@@ -16,7 +16,7 @@ import Register from "../views/register"
 import Notice from "../views/notice"
 import Auth from '../views/auth'
 import Account from '../views/account'
-
+import VideoLesson from '../views/videolesson'
 
 export const tabBarRoute = [
     {
@@ -107,6 +107,11 @@ export const noTabBarRoute = [
         component: Account,
         name: "注册成功",
     },
+    {
+        path:'/lesson',
+        component:VideoLesson,
+        name:'视频播放'
+    }
 
 ]
 

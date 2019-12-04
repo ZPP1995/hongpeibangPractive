@@ -6,6 +6,8 @@ import Recommend from '../../components/university/recommend'
 import Public from '../../components/university/public'
 import store from '../../store'
 import actionUniver from '../../store/actionCreator/university' 
+import Swiper from 'swiper/js/swiper.js'
+import 'swiper/css/swiper.min.css'
   export default class University extends React.Component{
     render() {
         return (
@@ -37,10 +39,9 @@ import actionUniver from '../../store/actionCreator/university'
            
         )
     }
-    initSwipe(info){
-      return info
-    }
+
     componentDidMount(){
+      
       const li=document.querySelectorAll('li')
       const p=document.querySelector('.activeP')
       const show=document.querySelector('.universityShow')
@@ -57,8 +58,7 @@ import actionUniver from '../../store/actionCreator/university'
             if(i===0){
               show.style.display='block'
               hidden.style.display='none'
-              store.dispatch(actionUniver.getUniversity()) 
-
+              store.dispatch(actionUniver.getUniversity())
             }else{
                  show.style.display='none'
                  hidden.style.display='block'
@@ -66,6 +66,7 @@ import actionUniver from '../../store/actionCreator/university'
                 //  hidden.setAttribute('categoryid',id)
                 store.dispatch(actionUniver.getPublic(id))
                 //  _this.props.getPublics(id)
+            
             }
            }
        }
