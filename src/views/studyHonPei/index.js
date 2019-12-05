@@ -25,9 +25,7 @@ class StudyHopei extends Component {
                         <div className={"shipu8"}>2</div>
                     </span>
                     <div className={"shipu9"}>
-                        <div className={"shipu10"} onClick={() => {
-                            this.props.history.push("/search")
-                        }}>
+                        <div className={"shipu10"} onClick={() => {this.props.history.push("/search")}}>
                             <span className={"shipu11"}>
                                 <img className={"shipu12"} src={"/img/FltPAS-35CZfvSpnHacXWoqcfFz5?42X42&imageView2/1/w/42/h/42"} alt="" />
                             </span>

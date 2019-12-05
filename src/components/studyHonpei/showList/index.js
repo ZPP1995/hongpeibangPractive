@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./showList.css"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
+import {withRouter} from "react-router-dom"
 //引入getIndexByWeb  aaction
 import getIndexAction from "../../../store/actionCreator/getIndexByWeb"
 class ShowList extends Component {
@@ -22,7 +23,7 @@ class ShowList extends Component {
                                     <ul className="showImgCon2">
                                         {
                                             v.item.map((chld, n) => (
-                                                <li className="showImgCon3" key={n}>
+                                                <li className="showImgCon3" key={n} onClick={()=>this.props.history.push({pathname:'/lesson',state:{educationCourseId:chld.educationCourseId,clientId:chld.clientId}})}>
                                                     <div className="showImg">
                                                         <img className="showImg2" src={chld.image} alt="" />
                                                     </div>
@@ -57,5 +58,5 @@ function mapStateToProps(state) {
 
 
 
-export default connect(mapStateToProps, dispatch => bindActionCreators(getIndexAction, dispatch))(ShowList)
+export default connect(mapStateToProps, dispatch => bindActionCreators(getIndexAction, dispatch))(withRouter(ShowList))
 

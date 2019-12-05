@@ -19,11 +19,17 @@ import searchReducer from  "./search"
 //搜索详情页面
 import getMoreRecipeReducer from "./getMoreRecipe"
 
+// 分类页面中的推荐
+import {getClassify,getRecommend}from "./getRecommend"
+
  const reducer=combineReducers({
     recomend:recomendReducer,
     search:searchReducer,
     getIndex:getIndexReducer,
     getMoreRecipe:getMoreRecipeReducer,
+    getRecommend,
+    getClassify,
+ 
     university,
     publi,
     swiper,

@@ -23,10 +23,10 @@
 学烘培https://www.hongbeibang.com/
 搜索https://www.hongbeibang.com/search
 搜索详情页https://www.hongbeibang.com/search/recipe/%F0%9F%94%A5%E5%90%90%E5%8F%B8
+食谱分类：https://www.hongbeibang.com/classify
+//推荐接口：https://api.hongbeibang.com/classify/getRecommend?_t=1575529659303&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ
+//分类接口：https://api.hongbeibang.com/classify/get?_t=1575529659465&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ
 
-
-https://api.hongbeibang.com/search/getMoreRecipe?_t=1575346060189&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ&pageIndex=0&pageSize=10&keyword=12&sort=
-https://api.hongbeibang.com/search/getMoreRecipe?_t=1575429288965&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc2NDA0Mjg0OSwiaWF0IjoxNTc0NjU0MDQ5fQ.ZW5G18SuMYIFetFVBBPfYjAG8O9szzWcEOtbLjPZGwQ&pageIndex=0&pageSize=10&keyword=%25F0%259F%2594%25A5%25E5%25A5%25B6%25E6%25B2%25B9%25E8%259B%258B%25E7%25B3%2595&sort=
 
 /**************************陈健飞*****************************/
 

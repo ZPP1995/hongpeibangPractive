@@ -137,7 +137,7 @@ import {
        )
    }
     componentDidMount(){
-      // console.log(this.props.location,888999)
+      console.log(this.props.location,888999)
       this.props.getVideoLessons(this.props.location.state.educationCourseId)
       this.props.getWorkImgs(this.props.location.state.educationCourseId)
       this.props.getTeachers(this.props.location.state.clientId)

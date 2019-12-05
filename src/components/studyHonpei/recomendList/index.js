@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 import recomendActionCreator from "../../../store/actionCreator/recomend"
+import {withRouter} from "react-router-dom"
 class RecomRmendList extends Component {
   render() {
+    //onClick={()=>this.props.history.push({pathname:'/lesson',state:{educationCourseId:chld.educationCourseId,clientId:chld.clientId}})}
+   //console.log( this.props.recommendList,99999);
     return (
+      
       <div className="showListBox2" >
         <div className="showTitle">
           <div className="showTitle2">
@@ -15,8 +19,9 @@ class RecomRmendList extends Component {
           <div className="showImgCon">
             <ul className="showImgCon2">
               {
+                // console.log(this.props.recommendList,11112222)
                 this.props.recommendList.map((v, i) => (
-                  <li className="showImgCon3" key={v.contentId}>
+                  <li className="showImgCon3" key={v.contentId} >
                     <div className="showImg">
                       <img className="showImg2" src={v.coverImage} alt="" />
                     </div>
@@ -39,10 +44,11 @@ class RecomRmendList extends Component {
 }
 
 const mapStateToProps = ((state, props) => {
+  console.log(state,22223333)
   return {
     recommendList: state.recomend.recommendList
   }
 })
 
-export default connect(mapStateToProps, dispatch => bindActionCreators(recomendActionCreator, dispatch))(RecomRmendList);
+export default connect(mapStateToProps, dispatch => bindActionCreators(recomendActionCreator, dispatch))(withRouter(RecomRmendList));
 

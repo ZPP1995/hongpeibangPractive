@@ -3,6 +3,7 @@ import "./serchRecipe.css"
 import { bindActionCreators } from "redux"
 import { connect} from "react-redux"
 import SearchList from "../../components/serchRecipe/searchList"
+import NoSearchList from "../../components/serchRecipe/noSearchList"
 import getMoreRecipeActionCreator from "../../store/actionCreator/getMoreRecipe"
 
  class SearchRecipe extends Component {
@@ -11,7 +12,8 @@ import getMoreRecipeActionCreator from "../../store/actionCreator/getMoreRecipe"
         this.state={
             list:["综合排序","做过最多","达人食谱"],
             index:0,
-            keyWord:""
+            keyWord:"",
+            pageIndex:5
         }
     }
     render() {
@@ -43,43 +45,41 @@ import getMoreRecipeActionCreator from "../../store/actionCreator/getMoreRecipe"
                             }
                             </ul>
                         </div>
-
-
                     </div>
                 }
                 {
                     //搜索结果列表
-                    <SearchList ></SearchList>
+                 <SearchList ></SearchList> 
+                 // <NoSearchList></NoSearchList>
                 }
             </div>
         )
     }
-    componentDidMount(){ 
+    getInfoInit( type="" ){
+        const pageIndex = this.state.pageIndex;
         const keyword = this.props.match.params.keyWord;
-        console.log(keyword);
-        this.props.getMoreRecipe.call(this,"",keyword)
+        this.props.getMoreRecipe.call(this,type,keyword,pageIndex)
+    }
+
+    componentDidMount(){ 
+        this.getInfoInit("")
      }
     getListHandle(i){
         this.setState({
             index:i
         })
-        const keyword = this.props.match.params.keyWord;
-        console.log(keyword);
-        
         if(i===0){
-            this.props.getMoreRecipe.call(this,"",keyword)
+            this.getInfoInit("")
         }
         if(i===1){
-            this.props.getMoreRecipe.call(this,"dishNum",keyword)
+            this.getInfoInit("dishNum")
         }
         if(i===2){
-            this.props.getMoreRecipe.call(this,"master",keyword)
-        }
-        
+            this.getInfoInit("master")
+        }   
     }
 
-
-
+    
 }
 
 function mapStateToProps(state) {
